@@ -1,0 +1,40 @@
+<html><!-- とりあえずこれでheadとbodyを囲む -->
+    <head>
+        <title>頻出HTMLタグ</title>
+        <link rel="stylesheet" href="このHTMLに適用したいCSSのパス（ファイルの場所）">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+            //下のJavaScript処理を書きたいときは先にこれを書いておかないと動かない</script>
+        <script>
+            //↑のscriptというタグで挟んだ内容はJavaScriptとして処理される
+            $(function(){
+                $("#header").load("header.html"); //これは"header"というidのタグを見つけたらそこにheader.htmlファイルを埋め込むという意味（とりあえずコピペでいい）
+                $("#footer").load("footer.html");
+            });
+            //上の4行でヘッダーとフッターを読み込んでいる。bpdy内で、idが"header"のものを作ればheaderファイルがそこに差し込まれる。
+        </script>
+
+    </head>
+
+    <body>
+        <header>挟んだ要素たちがヘッダーとしてグループ化できる（ヘッダーはそもそもheader.htmlとかいう感じで別ファイルとして用意してインポートしたほうがいい）</header>
+
+        <div id="header"></div> <!-- head内のJavaScriptでヘッダーファイルを読み込んでいたら、この書き方でヘッダーファイルをここに埋め込むことができる -->
+
+        <div class="">
+            <h1>見出しなど大きなものの情報（Googleの検索結果を左右しやすい）ページに4回以上登場しない感覚</h1>
+            <h2>H1ほどではない大きな情報、ページに10回以上登場しない感覚</h2>
+            <h3>わりと文章とか書いてもいいレベル</h3>
+            <h4>H3より不要な情報</h4>
+            <h5>ここまで来るとほとんど使わない</h5>
+            <h6>クソ、Googleの検索結果に左右されたくない文章など</h6>
+        </div>
+        <p>段落っぽい長い文章<br>←改行（/付きの閉じるタグは要らない）</p>
+
+        <img src ="ここに画像のurlやパス（ファイルの位置）を書く">
+        <a href="リンク先のurlやパス">ここにh系のタグやimgタグをはさむとそれがリンク付き要素になる</a>
+
+        <footer>挟んだものがヘッダーとしてグループ化できる（これもfooter.htmlというファイルを作ってインポートしたほうがいい）</footer>
+    </body>
+</html>
+<script src="JavaScriptのパスを書くとこのページにそれが適用される"></script>
